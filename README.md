@@ -1,7 +1,9 @@
 
 ![Cover Image](logo_gradient_mountains.png)
-> **⚠️ Disclaimer:**
-> Dieses Repository soll nur einen Überblick über ein  Projekt geben. Das Projekt liegt hier **nicht in Vollständigkeit** vor, nur in ihrer Datei Struktur mit **ausgewählten** Dateien und Erläuterungen dazu in dieser readme Datei. 
+>[!NOTE] 
+> Dieses Repository soll einen Überblick über ein Projekt geben. Das Projekt liegt hier **nicht in Vollständigkeit** vor.  Es soll lediglich zu **Bewerbungszwecken** Kernkomponenten aufzeigen und erklären.  
+> Die Seite ist unter [weizenblick.de](weizenblick.de) zu erreichen.
+
 
 This project is a full-stack web application, using **Django** on the backend, providing API Endpoints via django REST framework. On the frontend ReactJS is being used. Containerized with **Docker** and docker compose. **Nginx** handles serving staticfiles, acting as a reverse proxy together with **gunicorn**.
 
@@ -467,15 +469,5 @@ We ended up meeting in the "Pfälzerwald" area for a hike. There I happend to ta
 Non-Alcoholic beers exists.
 
 All images included are taken by myself for an instagram account.
-
-
-Allgäuer Alpen
-Liechtenstein
-Malta
-Mallorca
-Pfälzerwald
-Dreiländereck Deutschland Belgien Niederland
-Nördlichster Punkt Deutschlands, Sylt
-Biberkopf, 2700m, Allgäuer Alpen
 
 
