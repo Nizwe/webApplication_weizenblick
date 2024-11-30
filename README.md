@@ -27,7 +27,7 @@ The displayed data is prepared in the **data preprocessing** step. For now the a
 **Backend | Django**   [DETAILS](#backend)
 - Manages server-side logic, database interactions, and API endpoints.
 
-**Nginx**  [DETAILS](#server | nginx)
+**Nginx**  [DETAILS](#web server | nginx)
    - Serves static files and acts as a reverse proxy to handle client requests
 
 **Docker**  [DETAILS](#docker)
