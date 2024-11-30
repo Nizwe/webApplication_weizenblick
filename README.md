@@ -366,8 +366,8 @@ server {
     server_name weizenblick.de;
 
     # ssl certificates location
-    ssl_certificate /etc/nginx/ssl/----.cer;
-    ssl_certificate_key /etc/nginx/ssl/----.key;
+    ssl_certificate /---/nginx/ssl/----.cer;
+    ssl_certificate_key /---/nginx/ssl/----.key;
     ...
 }
 
