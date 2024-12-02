@@ -1,8 +1,11 @@
 
 ![Cover Image](logo_gradient_mountains.png)
->[!NOTE] 
-> Dieses Repository soll einen Überblick über ein Projekt geben. Das Projekt liegt hier **nicht in Vollständigkeit** vor.  Es soll lediglich zu **Bewerbungszwecken** Kernkomponenten aufzeigen und erklären.  
+
+> [!IMPORTANT] 
+> Dieses Repository soll einen Überblick über ein Projekt geben. Das Projekt liegt hier  **nicht in Vollständigkeit** vor.  Es soll lediglich zu **Bewerbungszwecken** Kernkomponenten aufzeigen und erklären.  
 > Die Seite ist unter [weizenblick.de](weizenblick.de) zu erreichen.
+
+
 
 
 This project is a full-stack web application, using **Django** on the backend, providing API Endpoints via django REST framework. On the frontend ReactJS is being used. Containerized with **Docker** and docker compose. **Nginx** handles serving staticfiles, acting as a reverse proxy together with **gunicorn**.
@@ -15,7 +18,11 @@ The displayed data is prepared in the **data preprocessing** step. For now the a
 ## Table of Contents
 1. [Architecture](#architecture)
 
-2. [Details](#details)
+2. [Details](#details)  
+    - [Frontend](#frontend)
+    - [Backend](#backend)      
+    - [Webserver](#web-server--nginx)
+    - [Docker](#docker)
 3. [Tools Used](#tools-used)
 4. [Additional Notes](#additional-notes)
 
@@ -29,7 +36,7 @@ The displayed data is prepared in the **data preprocessing** step. For now the a
 **Backend | Django**   [DETAILS](#backend)
 - Manages server-side logic, database interactions, and API endpoints.
 
-**Nginx**  [DETAILS](#web server | nginx)
+**Web Server | Nginx**  [DETAILS](#web-server--nginx)
    - Serves static files and acts as a reverse proxy to handle client requests
 
 **Docker**  [DETAILS](#docker)
@@ -207,7 +214,10 @@ py manage.py runserver --settings=core.settings.development
 
 ## Frontend
 
-Intro. MUI blablabla
+
+The frontend focuses on an interactive, user-friendly interface designed to explore locations on a map and related data using **ReactJS**.
+The design mainly uses Material-UI (**MUI**) components for consistent styling, on top of custom customization.
+
 
 ### Map View
 The map view consists of two main components:
@@ -221,29 +231,28 @@ The application keeps track of the active element via an ActiveSpotIndex react c
 The Sidebar is collapsible to the left, which enlarges the map to the full view width.
 
 <details open>
-  <summary>Preview on map view</summary>
+  <summary>Preview of map view</summary>
 
-  gif here
+  ![Image](wb_widget.png)
 
 </details>
 
 <details>
   <summary>Sidebar</summary>
 </details>
+
 <details>
-  <summary open>Map</summary>
+  <summary>Map</summary>
 
-  The map itself is initialiized in a react-leaflet ``<MapContainer>`` component.
+  The map itself is initialized in a react-leaflet ``<MapContainer>`` component.
 
-  The marker icon is conditionally rendered based on the ``activeSpotIndex`` context value. Instead of using the default leaflet ``<PopUp>`` component, each marker has a custom ``<PopUpWidget>`` component attached to it.
+  The marker icon is **conditionally** rendered based on the ``activeSpotIndex`` context value. Instead of using the default leaflet ``<PopUp>`` component, each marker has a custom ``<PopUpWidget>`` component attached to it.
 
-  The location of the marker, as well as the information shown in PopUpWidget is retrived from the ``spotsData`` and ``instaPostData`` context.
+  The location of the marker, as well as the information shown in ``<PopUpWidget>`` is retrived from the ``spotsData`` and ``instaPostData`` context.
 
 </details>
 
-[gif]  
-[activeContext]
-[popupwidget]
+
 
 ### Landing Image
 Responsive, **css** cover image animation.  
@@ -252,7 +261,7 @@ Used triangula to stylize a real image, seperated image components with Adobe Il
 <details open>
   <summary>Preview landing image</summary>
 
-  ![gif](landing_image_big.gif) 
+  ![gif](landing_image.gif) 
 
 
 </details>
@@ -436,22 +445,22 @@ These files serve as structured inputs for populating the database using custom 
 
 #### Python Packages
 ##### Django environment
-- django
-- django-cors-headers
+- [django](https://www.djangoproject.com/)
+- [django-cors-headers](https://pypi.org/project/django-cors-headers/)
 - [djangorestframework](https://www.django-rest-framework.org/)
-- djangorestframework-simplejwt
+- [djangorestframework-simplejwt](https://github.com/jazzband/djangorestframework-simplejwt)
 - [gunicorn](https://gunicorn.org/)
-- whitenoise
+- [whitenoise](https://whitenoise.readthedocs.io/en/stable/index.html)
 ##### Preprocessing
-- exifread
+- [ExifRead](https://pypi.org/project/ExifRead/)
 - [pandas](https://pandas.pydata.org/)
-- nominatim
+- [nominatim](https://nominatim.org/)
 
 #### Node packages
 - [Material UI](https://mui.com/material-ui/getting-started/)
 - [Leaflet](https://leafletjs.com/)
 - [React Leaflet](https://react-leaflet.js.org/)
-- react router dom
+- [react-router-dom](https://reactrouter.com/)
 
 ### Graphics
 - [triangula](https://github.com/rh12503/triangula)
@@ -466,8 +475,10 @@ These files serve as structured inputs for populating the database using custom 
 Beginning of Covid I talked with friends who live further away to meet up again. But basically everwhere in the cities everything was closed, so we figured why not meet somewhere in the middle outside.
 
 We ended up meeting in the "Pfälzerwald" area for a hike. There I happend to take a picture of a weizenbier with a nice view in the background. Ever since then we probably hiked all over this area and many more places and it became kind of a tradition to take a picture on a hike with a view and a beverage.  
-Non-Alcoholic beers exists.
+**Non-Alcoholic beers exists.**
 
 All images included are taken by myself for an instagram account.
+
+
 
 
