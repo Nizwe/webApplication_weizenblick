@@ -242,7 +242,7 @@ The Sidebar is collapsible to the left, which enlarges the map to the full view 
 </details>
 
 <details>
-  <summary>Map</summary>
+  <summary open>Map</summary>
 
   The map itself is initialized in a react-leaflet ``<MapContainer>`` component.
 
